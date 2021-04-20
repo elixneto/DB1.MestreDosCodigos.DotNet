@@ -1,0 +1,1 @@
+﻿## 8. Faça uma aplicação ler N valores decimais, imprima os valores em ordem crescente e decrescente

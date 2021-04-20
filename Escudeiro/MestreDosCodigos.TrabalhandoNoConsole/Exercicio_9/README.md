@@ -1,0 +1,14 @@
+﻿## 9. Utilizando a biblioteca LINQ crie no console e execute:
+- Crie uma lista que receba inteiros.
+- Imprimir todos os números da lista.
+- Imprimir todos os números da lista na ordem crescente.
+- Imprimir todos os números da lista na ordem decrescente.
+- Imprima apenas o primeiro número da lista.
+- Imprima apenas o último número da lista.
+- Insira um número no início da lista.
+- Insira um número no final da lista.
+- Remova o primeiro número.
+- Remova o último número.
+- Retorne apenas os números pares.
+- Retorne apenas o número informado.
+- Tranforme todos os númeroa da lista em um Array.

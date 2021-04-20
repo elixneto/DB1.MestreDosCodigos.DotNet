@@ -12,11 +12,14 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             Console.WriteLine();
         }
 
-        public static int LerInteiro(string mensagem)
+        public static int LerInteiro(string mensagem = default)
         {
-            Console.WriteLine(mensagem);
+            if(!string.IsNullOrEmpty(mensagem))
+            {
+                Console.WriteLine(mensagem);
+            }
+            
             var entradaDoUsuario = Console.ReadLine();
-            Console.WriteLine();
 
             if (!int.TryParse(entradaDoUsuario, out int numero))
             {

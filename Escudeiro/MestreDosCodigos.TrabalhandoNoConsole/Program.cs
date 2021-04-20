@@ -3,6 +3,10 @@ using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_2;
 using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_3;
 using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4;
 using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_5;
+using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_6;
+using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_7;
+using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_8;
+using MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9;
 
 namespace MestreDosCodigos.TrabalhandoNoConsole
 {
@@ -15,6 +19,10 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             new Exercicio3();
             new Exercicio4();
             new Exercicio5();
+            new Exercicio6();
+            new Exercicio7();
+            new Exercicio8();
+            new Exercicio9();
         }
     }
 }
