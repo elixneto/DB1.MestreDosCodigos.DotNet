@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MestreDosCodigos.TrabalhandoNoConsole;
+using System;
 
 namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 {
@@ -9,6 +10,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
         public Exercicio3()
         {
+            ConsoleHelper.Cabecalho("EXERCICIO 3");
+
             Extrato();
 
             Console.WriteLine();

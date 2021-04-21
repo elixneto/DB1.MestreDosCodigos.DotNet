@@ -1,9 +1,13 @@
-﻿namespace MestreDosCodigos.UtilizandoPOO.Exercicio_4
+﻿using MestreDosCodigos.TrabalhandoNoConsole;
+
+namespace MestreDosCodigos.UtilizandoPOO.Exercicio_4
 {
     public class Exercicio4
     {
         public Exercicio4()
         {
+            ConsoleHelper.Cabecalho("EXERCICIO 4");
+
             var controle = new ControleRemoto(new Televisao());
 
             controle.MostrarDadosDaTV();

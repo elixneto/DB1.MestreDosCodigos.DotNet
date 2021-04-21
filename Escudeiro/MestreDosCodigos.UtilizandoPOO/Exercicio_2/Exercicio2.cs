@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MestreDosCodigos.TrabalhandoNoConsole;
+using System;
 
 namespace MestreDosCodigos.UtilizandoPOO.Exercicio_2
 {
@@ -6,6 +7,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_2
     {
         public Exercicio2()
         {
+            ConsoleHelper.Cabecalho("EXERCICIO 2");
+
             var pessoa = new Pessoa();
 
             pessoa.AlterarNome("Élix Neto");
