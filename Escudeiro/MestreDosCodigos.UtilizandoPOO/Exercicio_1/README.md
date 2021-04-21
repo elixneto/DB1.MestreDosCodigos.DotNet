@@ -8,4 +8,4 @@ Programação Orientada à Objetos. É um paradigma de programação;
 ## Quando usar uma classe abstrata e quando devo usar uma interface?
 ## O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
 ## Existe herança múltipla (de classes) em C#?
-Não.
+Não. Assim como o JAVA, C# permite que uma classe implemente mais de uma Interface porém somente de uma única classe concreta
