@@ -13,7 +13,7 @@ Um conceito que protege a implementação e evita acessos indevidos do contexto 
 
 ## Quando usar uma classe abstrata e quando devo usar uma interface?
 Utilizamos Interface quando é necessário expôr uma abstração como um contrato, sem implementações ou comportamentos padrão;<br>
-Uma classe abstrata é utilizada quando a abstração possui comportamentos que serão reaproveitados pelas classes derivadas podendo, ou não, sobrescerver esses comportamentos para cada especificação diferente;
+Uma classe abstrata é utilizada quando a abstração possui comportamentos que serão reaproveitados pelas classes derivadas podendo, ou não, sobrescerver esses comportamentos para cada especificação;
 
 ## O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
 IDisposable: Fornece um mecanismo para liberar recursos não gerenciados;<br>
