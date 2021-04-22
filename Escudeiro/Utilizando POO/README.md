@@ -11,3 +11,5 @@ Execute o comando abaixo:
 ```
 dotnet run
 ```
+
+E siga as instruções do console.
