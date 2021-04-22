@@ -27,3 +27,6 @@ Acesse o link [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-
 ### Pronto! Seu ambiente está preparado para executar as aplicações
 
 ## Passo 2 - Baixar o projeto
+Faça o download do projeto e descompacte em uma pasta de sua preferência
+
+## Passo 3 - 
