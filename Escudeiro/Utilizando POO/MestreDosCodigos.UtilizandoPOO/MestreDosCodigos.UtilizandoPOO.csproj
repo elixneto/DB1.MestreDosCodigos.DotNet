@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MestreDosCodigos.TrabalhandoNoConsole\MestreDosCodigos.TrabalhandoNoConsole.csproj" />
+    <ProjectReference Include="..\..\Trabalhando no Console\MestreDosCodigos.TrabalhandoNoConsole\MestreDosCodigos.TrabalhandoNoConsole.csproj" />
   </ItemGroup>
 
 </Project>
