@@ -1,7 +1,7 @@
 ﻿# DB1.MestreDosCodigos.DotNet
 https://db1group.github.io/mestre-dos-codigos/#/dotnet
 
-## Instalando .NET 5 - Preparando o ambiente
+## Passo 1 - Instalando .NET 5
 Para a execução das aplicações é necessário instalar o .NET Desktop Runtime 5.
 
 ### Execute o comando no console:
@@ -25,3 +25,5 @@ Acesse o link [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-
 
 
 ### Pronto! Seu ambiente está preparado para executar as aplicações
+
+## Passo 2 - Clonar o projeto
