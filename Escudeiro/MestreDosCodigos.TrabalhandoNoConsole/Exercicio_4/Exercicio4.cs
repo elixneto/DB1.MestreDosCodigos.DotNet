@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4
 {
@@ -10,7 +9,7 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4
 
         public Exercicio4()
         {
-            ConsoleHelper.Cabecalho("EXERCICIO 4");
+            MostrarTexto();
 
             var quantidadeDeAlunos = ConsoleHelper.LerInteiro("Informe o total de alunos:");
 
@@ -18,17 +17,16 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4
 
             for (int i = 0; i < quantidadeDeAlunos; i++)
             {
-                Console.WriteLine("Informe o nome do novo aluno:");
+                Console.WriteLine();
+                Console.WriteLine($"Informe o nome do {(i + 1)}º aluno:");
                 var nome = Console.ReadLine();
 
                 var novoAluno = new Aluno(nome);
 
-                Console.WriteLine($"Informe as {Aluno.QuantidadeDeNotas} notas de '{nome}':");
-
                 var n = 0;
                 while (n < Aluno.QuantidadeDeNotas)
                 {
-                    novoAluno.Notas[n] = ConsoleHelper.LerDecimal();
+                    novoAluno.Notas[n] = ConsoleHelper.LerDecimal($"Informe a {(n + 1)}ª nota de '{novoAluno.Nome}':");
                     n++;
                 }
 
@@ -40,11 +38,13 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4
 
         void ImprimirAlunosComMediaMaiorQue7()
         {
+            ConsoleHelper.Subtitulo("Imprima todos os alunos com médias superiores a 7");
+
             foreach (var aluno in Alunos)
             {
                 var somaDasNotas = 0m;
 
-                foreach(var nota in aluno.Notas)
+                foreach (var nota in aluno.Notas)
                 {
                     somaDasNotas += nota;
                 }
@@ -56,6 +56,20 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4
                     Console.WriteLine($"- {aluno.Nome} | média {media}");
                 }
             }
+
+            Console.WriteLine();
+            ConsoleHelper.VideClasse("MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4", "Exercicio4", 43);
+        }
+
+        private void MostrarTexto()
+        {
+            ConsoleHelper.Cabecalho("EXERCICIO 4",
+                "Faça uma aplicação que receba N alunos com suas respectivas notas. User foreach para estrutura de repetição:",
+                " - Crie um objeto Alunos",
+                " - Armazene os alunos em uma lista");
+
+            ConsoleHelper.VideClasse("MestreDosCodigos.TrabalhandoNoConsole.Exercicio_4", "Aluno");
+            Console.WriteLine();
         }
     }
 }

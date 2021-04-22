@@ -10,9 +10,12 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         public Exercicio9()
         {
-            ConsoleHelper.Cabecalho("EXERCICIO 9");
+            ConsoleHelper.Cabecalho("EXERCICIO 9",
+                "Utilizando a biblioteca LINQ crie no console e execute:");
 
-            ListaDeInteiros = new List<int>(10) { 5, 4, 6, 3, 7, 2, 8, 1, 9, 10 };
+            Console.WriteLine();
+
+            ListaDeInteiros = new List<int>(10) { 7, 4, 6, 3, 5, 2, 10, 1, 9, 8 };
 
             ImprimirTodos();
             ImprimirCrescente();
@@ -21,6 +24,7 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
             ImprimirUltimoNumero();
             InserirNumeroNoInicio();
             InserirNumeroNoFinal();
+            RemoverOPrimeiroNumero();
             RemoverUltimoNumero();
             ImprimirPares();
             ImprimirNumeroInformado();
@@ -29,16 +33,15 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirTodos()
         {
-            Console.WriteLine("TODOS:");
+            ConsoleHelper.Subtitulo("Imprimir todos os números da lista");
 
             ListaDeInteiros.ForEach(n => Console.WriteLine(n));
-
-            Console.WriteLine();
         }
 
         private void ImprimirCrescente()
         {
-            Console.WriteLine("CRESCENTE:");
+            ConsoleHelper.Subtitulo("Imprimir todos os números da lista na ordem crescente",
+                "> .OrderBy(n => n)");
 
             var listaCrescente = ListaDeInteiros.OrderBy(n => n); // .OrderBy() é LINQ
 
@@ -49,7 +52,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirDecrescente()
         {
-            Console.WriteLine("DECRESCENTE:");
+            ConsoleHelper.Subtitulo("Imprimir todos os números da lista na ordem decrescente",
+                "> .OrderByDescending(n => n)");
 
             var listaCrescente = ListaDeInteiros.OrderByDescending(n => n); // .OrderByDescending() é LINQ
 
@@ -60,7 +64,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirPrimeiroNumero()
         {
-            Console.WriteLine("PRIMEIRO:");
+            ConsoleHelper.Subtitulo("Imprima apenas o primeiro número da lista",
+                "> .First()");
 
             var primeiroNumero = ListaDeInteiros.First(); // .First() é LINQ
 
@@ -71,7 +76,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirUltimoNumero()
         {
-            Console.WriteLine("ÚLTIMO:");
+            ConsoleHelper.Subtitulo("Imprima apenas o último número da lista",
+                "> .Last()");
 
             var ultimoNumero = ListaDeInteiros.Last(); // .Last() é LINQ
 
@@ -82,40 +88,62 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void InserirNumeroNoInicio()
         {
-            Console.WriteLine("INSERIR NO INÍCIO:");
+            ConsoleHelper.Subtitulo("Insira um número no início da lista",
+                "> .Insert(0, numeroParaInserir) não é LINQ, é da própria List<T>");
 
             var numeroParaInserir = ConsoleHelper.LerInteiro("Informe um inteiro para adicionar no início da lista:");
 
             ListaDeInteiros.Insert(0, numeroParaInserir); // .Insert não é LINQ, é da própria List<T>
 
             Console.WriteLine();
+
+            ImprimirPorEnumeracao(ListaDeInteiros);
         }
 
         private void InserirNumeroNoFinal()
         {
-            Console.WriteLine("INSERIR NO FINAL:");
+            ConsoleHelper.Subtitulo("Insira um número no final da lista",
+                "> .Add(numeroParaInserir) não é LINQ, é da própria List<T> e sempre insere no final da lista");
 
             var numeroParaInserir = ConsoleHelper.LerInteiro("Informe um inteiro para adicionar no final da lista:");
 
             ListaDeInteiros.Add(numeroParaInserir); // .Add não é LINQ, é da própria List<T>
 
             Console.WriteLine();
+
+            ImprimirPorEnumeracao(ListaDeInteiros);
+        }
+
+        private void RemoverOPrimeiroNumero()
+        {
+            ConsoleHelper.Subtitulo("Remova o primeiro número",
+                "> .RemoveAt(0) não é LINQ, é da própria List<T>");
+
+            ListaDeInteiros.RemoveAt(0); // .RemoveAt não é LINQ, é da própria List<T>
+
+            Console.WriteLine();
+
+            ImprimirPorEnumeracao(ListaDeInteiros);
         }
 
         private void RemoverUltimoNumero()
         {
-            Console.WriteLine("REMOVER O ULTIMO:");
+            ConsoleHelper.Subtitulo("Remova o último número",
+                "> .RemoveAt(quantidade - 1) não é LINQ, é da própria List<T>");
 
             var indiceDoUltimoNumero = ListaDeInteiros.Count - 1;
 
             ListaDeInteiros.RemoveAt(indiceDoUltimoNumero); // .RemoveAt não é LINQ, é da própria List<T>
 
             Console.WriteLine();
+
+            ImprimirPorEnumeracao(ListaDeInteiros);
         }
 
         private void ImprimirPares()
         {
-            Console.WriteLine("PARES:");
+            ConsoleHelper.Subtitulo("Retorne apenas os números pares",
+                "> .Where(n => (n % 2) == 0)");
 
             var pares = ListaDeInteiros.Where(n => (n % 2) == 0); // .Where é LINQ
 
@@ -126,6 +154,9 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirNumeroInformado()
         {
+            ConsoleHelper.Subtitulo("Retorne apenas o número informado",
+                "> .FirstOrDefault(n => n == numeroInformado) | .IndexOf(numeroInformado) não é LINQ, é da própria List<T>");
+
             var numeroInformado = ConsoleHelper.LerInteiro("Informe um número para ser pesquisado:");
 
             var numeroEncontrado = ListaDeInteiros.FirstOrDefault(n => n == numeroInformado); // .FirstOrDefault é LINQ
@@ -145,12 +176,15 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_9
 
         private void ImprimirArray()
         {
+            ConsoleHelper.Subtitulo("Tranforme todos os números da lista em um Array",
+                "> .Select(n => n.ToString()) | .Aggregate((i, j) => i + \", \" + j)");
+
             var array = ListaDeInteiros.ToArray();
 
             Console.WriteLine("ARRAY");
 
             var numerosConcatenadosPorVirgula = array.Select(n => n.ToString())         // .Select é LINQ
-                                                     .Aggregate((i, j) => i + "," + j); // .Aggregate é LINQ
+                                                     .Aggregate((i, j) => i + ", " + j); // .Aggregate é LINQ
 
             Console.WriteLine(numerosConcatenadosPorVirgula);
         }

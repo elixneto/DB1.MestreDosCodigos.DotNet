@@ -135,11 +135,11 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1
             listaDeEnumeravel.Adicionar(arrayDeEnumeravel);
             foreach (var enumeravel in listaDeEnumeravel)
             {
-                // Ao executar o foreach é invocado o método Next() do Enumerador
+                // Ao executar o foreach é invocado o método Next() do Enumerador implicitamente
             }
             for (int indice = 0; indice < listaDeEnumeravel.Tamanho; indice++)
             {
-                // Ao executar o for o método Next() não é chamado implicitamente
+                // Ao executar o for o método Next() não é chamado
             }
 
             TextoInterfaces.MostrarIComparable();
@@ -187,7 +187,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1
 
             Console.WriteLine("-----------------");
             Console.WriteLine("Ao trocar o nome:");
-            ((MinhaClasse)memberwise).Nome = "X";
+            memberwise.Nome = "X";
             Console.WriteLine(memberwise);
             Console.WriteLine(memberwiseClone);
         }

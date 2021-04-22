@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace MestreDosCodigos.TrabalhandoNoConsole
 {
@@ -7,9 +8,36 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
         public static void Cabecalho(string titulo)
         {
             Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("-----------------");
             EscreverLinha(titulo, ConsoleColor.DarkCyan);
             Console.WriteLine("-----------------");
+            Console.WriteLine();
+        }
+        public static void Cabecalho(string titulo, string descricao)
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("-----------------");
+            EscreverLinha(titulo, ConsoleColor.DarkCyan);
+            Console.WriteLine("-----------------");
+            PressioneEnter();
+            Escrever(descricao, ConsoleColor.DarkGray);
+            Console.WriteLine();
+        }
+        public static void Cabecalho(string titulo, params string[] descricoes)
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("-----------------");
+            EscreverLinha(titulo, ConsoleColor.DarkCyan);
+            Console.WriteLine("-----------------");
+            PressioneEnter();
+            foreach (var descricao in descricoes)
+            {
+                Escrever(descricao, ConsoleColor.DarkGray);
+                Console.WriteLine();
+            }
             Console.WriteLine();
         }
 
@@ -23,7 +51,7 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             Console.Write(":");
             Console.WriteLine();
 
-            foreach(var descricao in descricoes)
+            foreach (var descricao in descricoes)
             {
                 Escrever(descricao, ConsoleColor.DarkGray);
                 Console.WriteLine();
@@ -32,7 +60,7 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             Console.WriteLine();
         }
 
-        public static void PressioneEnter(string texto)
+        public static void PressioneEnter(string texto = default)
         {
             Console.WriteLine();
             Escrever(texto, ConsoleColor.DarkCyan);
@@ -41,16 +69,16 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             Console.ReadKey();
 
             Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
         }
 
         public static int LerInteiro(string mensagem = default)
         {
-            if(!string.IsNullOrEmpty(mensagem))
+            if (!string.IsNullOrEmpty(mensagem))
             {
                 Console.WriteLine(mensagem);
             }
-            
+
             var entradaDoUsuario = Console.ReadLine();
 
             if (!int.TryParse(entradaDoUsuario, out int numero))
@@ -127,6 +155,88 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             Console.ForegroundColor = cor;
             Console.WriteLine(palavras);
             Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public static void VideClasse(string @namespace, string classe)
+        {
+            Console.Write("implementado em [");
+            Escrever(@namespace + ".", ConsoleColor.Gray);
+            Escrever(classe + ".cs", ConsoleColor.DarkGreen);
+            Console.Write("]");
+
+            Console.WriteLine();
+        }
+
+        public static void VideClasse(string @namespace, string classe, int linha)
+        {
+            Console.Write("implementado em [");
+            Escrever(@namespace + ".", ConsoleColor.Gray);
+            Escrever(classe + ".cs", ConsoleColor.DarkGreen);
+            Console.Write("] linha " + linha);
+
+            Console.WriteLine();
+        }
+
+        public static void VideClasse(string @namespace, string classe, params int[] linhas)
+        {
+            Console.Write("implementado em [");
+            Escrever(@namespace + ".", ConsoleColor.Gray);
+            Escrever(classe + ".cs", ConsoleColor.DarkGreen);
+            Console.Write("] linhas " + linhas.Select(l => l.ToString()).Aggregate((i, j) => i + ", " + j));
+
+            Console.WriteLine();
+        }
+
+        public static void VideInterface(string @namespace, string classe)
+        {
+            Console.Write("implementado em [");
+            Escrever(@namespace + ".", ConsoleColor.Gray);
+            Escrever(classe + ".cs]", ConsoleColor.DarkYellow);
+
+            Console.WriteLine();
+        }
+
+        public static void VideChamada(string @namespace, string classe, int linha)
+        {
+            Console.Write("invocado em [");
+            Escrever(@namespace + ".", ConsoleColor.Gray);
+            Escrever(classe + ".cs", ConsoleColor.DarkGreen);
+            Console.Write("] linha " + linha);
+
+            Console.WriteLine();
+        }
+
+        public static void MestreDosCodigos_Fade()
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("================================================================================================================================================");
+            Console.WriteLine();
+            Console.WriteLine("@@@@@@@@@@  @@@@@@@@  @@@@@@ @@@@@@@ @@@@@@@  @@@@@@@@    @@@@@@@   @@@@@@   @@@@@@     @@@@@@@  @@@@@@  @@@@@@@  @@@  @@@@@@@   @@@@@@   @@@@@@");
+            Console.WriteLine("@@! @@! @@! @@!      !@@       @!!   @@!  @@@ @@!         @@!  @@@ @@!  @@@ !@@        !@@      @@!  @@@ @@!  @@@ @@! !@@       @@!  @@@ !@@    ");
+            Console.WriteLine("@!!!!!@ @!@ @!!!:!    !@@!!    @!!   @!@!!@!  @!!!:!      @!@  !@! @!@  !@!  !@@!!     !@!      @!@  !@! @!@  !@! !!@ !@! @!@!@ @!@  !@!  !@@!!");
+            Console.WriteLine("!!:     !!: !!:          !:!   !!:   !!: :!!  !!:         !!:  !!! !!:  !!!     !:!    :!!      !!:  !!! !!:  !!! !!: :!!   !!: !!:  !!!     !:!");
+            Console.WriteLine(" :      :   : :: ::  ::.: :     :     :   : : : :: ::     :: :  :   : :. :  ::.: :      :: :: :  : :. :  :: :  :  :    :: :: :   : :. :  ::.: : ");
+            Console.WriteLine();
+            Console.WriteLine("================================================================================================================================================");
+            Console.WriteLine();
+        }
+
+        public static void MestreDosCodigos_Doom()
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine(@"___  ___          _                  _             _____           _ _                 ");
+            Console.WriteLine(@"|  \/  |         | |                | |           /  __ \         | (_)                ");
+            Console.WriteLine(@"| .  . | ___  ___| |_ _ __ ___    __| | ___  ___  | /  \/ ___   __| |_  __ _  ___  ___ ");
+            Console.WriteLine(@"| |\/| |/ _ \/ __| __| '__/ _ \  / _` |/ _ \/ __| | |    / _ \ / _` | |/ _` |/ _ \/ __|");
+            Console.WriteLine(@"| |  | |  __/\__ \ |_| | |  __/ | (_| | (_) \__ \ | \__/\ (_) | (_| | | (_| | (_) \__ \");
+            Console.WriteLine(@"\_|  |_/\___||___/\__|_|  \___|  \__,_|\___/|___/  \____/\___/ \__,_|_|\__, |\___/|___/");
+            Console.WriteLine(@"                                                                        __/ |          ");
+            Console.WriteLine(@"                                                                       |___/           ");
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine();
         }
     }
 }

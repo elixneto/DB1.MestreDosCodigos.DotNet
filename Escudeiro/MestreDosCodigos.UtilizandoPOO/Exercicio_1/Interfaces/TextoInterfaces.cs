@@ -7,6 +7,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1.Interfaces
     {
         public static void MostrarIDisposable()
         {
+            ConsoleHelper.PressioneEnter("IDisposable");
+
             Console.Write("> Ao herdar da interface ");
             ConsoleHelper.Escrever("IDisposable", ConsoleColor.Yellow);
             Console.Write(", é necessário implementar o método ");
@@ -24,6 +26,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1.Interfaces
 
         public static void MostrarIEnumerable()
         {
+            ConsoleHelper.PressioneEnter("IEnumerable");
+
             Console.WriteLine();
             Console.Write("> Ao herdar da interface ");
             ConsoleHelper.Escrever("IEnumerable", ConsoleColor.Yellow);
@@ -38,6 +42,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1.Interfaces
 
         public static void MostrarIComparable()
         {
+            ConsoleHelper.PressioneEnter("IComparable");
+
             Console.WriteLine();
             Console.Write("> Ao herdar da interface ");
             ConsoleHelper.Escrever("IComparable", ConsoleColor.Yellow);
@@ -53,6 +59,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_1.Interfaces
 
         public static void MostrarIClonable()
         {
+            ConsoleHelper.PressioneEnter("IClonable");
+
             Console.WriteLine();
             Console.Write("> Ao herdar da interface ");
             ConsoleHelper.Escrever("IClonable", ConsoleColor.Yellow);

@@ -31,7 +31,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
             base.MostrarDados();
 
             Console.WriteLine("Tx Op : " + TaxaDeOperacao);
-            Console.WriteLine("---------------------------");
+            Console.WriteLine("-----------------------------------");
             Console.WriteLine();
         }
 

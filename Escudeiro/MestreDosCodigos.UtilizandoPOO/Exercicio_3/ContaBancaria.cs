@@ -44,8 +44,8 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
         public virtual void MostrarDados()
         { 
-            Console.WriteLine("------ " + this.GetType().Name + " ------");
-            Console.WriteLine("---------------------------");
+            Console.WriteLine("------ EXTRATO " + this.GetType().Name + " ------");
+            Console.WriteLine("-----------------------------------");
             Console.WriteLine("Conta : " + NumeroDaConta);
             Console.WriteLine("Saldo : " + Saldo);
         }

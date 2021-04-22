@@ -23,6 +23,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole
             new Exercicio7();
             new Exercicio8();
             new Exercicio9();
+
+            ConsoleHelper.MestreDosCodigos_Doom();
         }
     }
 }

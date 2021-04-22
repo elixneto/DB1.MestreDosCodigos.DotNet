@@ -11,4 +11,4 @@
 - Remova o último número.
 - Retorne apenas os números pares.
 - Retorne apenas o número informado.
-- Tranforme todos os númeroa da lista em um Array.
+- Tranforme todos os números da lista em um Array.

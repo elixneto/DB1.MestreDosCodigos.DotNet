@@ -9,18 +9,19 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_8
 
         public Exercicio8()
         {
-            ConsoleHelper.Cabecalho("EXERCICIO 8");
+            ConsoleHelper.Cabecalho("EXERCICIO 8",
+                "Faça uma aplicação ler N valores decimais, imprima os valores em ordem crescente e decrescente");
+
+            Console.WriteLine();
 
             var quantidadeDeDecimais = ConsoleHelper.LerInteiro("Informe a quantidade de decimais:");
 
             ListaDeDecimais = new List<decimal>(quantidadeDeDecimais);
 
-            Console.WriteLine($"Informe os {quantidadeDeDecimais} decimais:");
-
             int i = 0;
             while (i < quantidadeDeDecimais)
             {
-                var numero = ConsoleHelper.LerDecimal();
+                var numero = ConsoleHelper.LerDecimal($"Informe o {(i + 1)}º decimal:");
                 ListaDeDecimais.Add(numero);
 
                 i++;
@@ -35,6 +36,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_8
 
         private void OrdenarCrescente()
         {
+            ConsoleHelper.Subtitulo("Ordernar Crescente");
+
             // Por padrão ordena crescente
             // ListaDeDecimais.Sort();
 
@@ -43,6 +46,8 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_8
 
         private void OrdenarDecrescente()
         {
+            ConsoleHelper.Subtitulo("Ordernar Decrescente");
+
             // Ordena ao contrário (se executar o .Sort() antes do .Reverse()
             // a lista fica ordenada decrescente)
             // ListaDeDecimais.Reverse();
@@ -52,7 +57,6 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_8
 
         private void Imprimir()
         {
-            Console.WriteLine("----------");
             foreach (var numero in ListaDeDecimais)
             {
                 Console.WriteLine(numero);

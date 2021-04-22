@@ -4,19 +4,19 @@ namespace MestreDosCodigos.TrabalhandoNoConsole.Exercicio_1
 {
     public class CalculadoraSimples
     {
-        public int A { get; }
-        public int B { get; }
+        public double A { get; }
+        public double B { get; }
 
-        public CalculadoraSimples(int a, int b)
+        public CalculadoraSimples(double a, double b)
         {
             A = a;
             B = b;
         }
 
-        public int Somar() => A + B;
-        public int Subtrair() => A - B;
-        public int Multiplicar() => A * B;
-        public int Dividir()
+        public double Somar() => A + B;
+        public double Subtrair() => A - B;
+        public double Multiplicar() => A * B;
+        public double Dividir()
         {
             if (A == 0)
             {
