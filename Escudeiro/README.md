@@ -17,7 +17,4 @@ Com a chegada e popularização dos containers, microsserviços, IoT e a ascens�
 > .Net Full Framework possui o código fechado na Microsoft; .Net Core é open-source e possui seu código hospedado no Github;<br>
 
 ## Instalando .NET 5 - Preparando o ambiente
-
-## Trabalhando no Console
-
-## Utilizando POO
+x x x  x x x
