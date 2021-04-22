@@ -24,9 +24,7 @@ Acesse o link [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-
 Acesse o link [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.202-windows-x64-installer) pra baixar o SDK x64 Windows ou https://dotnet.microsoft.com/download/dotnet/5.0 para escolher seu sistema operacional.
 
 
-### Pronto! Seu ambiente está preparado para executar as aplicações
-
 ## Passo 2 - Baixar o projeto
 Faça o download do projeto e descompacte em uma pasta de sua preferência
 
-## Passo 3 - 
+### Pronto! Seu ambiente está preparado para executar as aplicações
