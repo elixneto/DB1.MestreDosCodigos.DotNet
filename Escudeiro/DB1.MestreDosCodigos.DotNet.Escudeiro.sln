@@ -8,9 +8,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MestreDosCodigos.UtilizandoPOO", "Utilizando POO\MestreDosCodigos.UtilizandoPOO\MestreDosCodigos.UtilizandoPOO.csproj", "{B265ABDC-8EC6-44E5-90B2-EA8014AC6BF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trabalhando com Testes", "Trabalhando com Testes", "{C5A537D3-3FA7-46E4-BEAA-3BDE869741CF}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilizando POO", "Utilizando POO", "{7BEF953B-56B1-46E2-B92E-A33AD1E4E124}"
 EndProject
