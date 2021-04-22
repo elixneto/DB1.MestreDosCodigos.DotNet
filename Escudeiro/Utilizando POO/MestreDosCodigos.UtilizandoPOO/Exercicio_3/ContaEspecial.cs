@@ -29,6 +29,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
             Console.WriteLine("Limite: " + Limite);
             Console.WriteLine("-----------------------------------");
+            Console.WriteLine();
         }
 
         protected override bool HaSaldoSuficienteParaSaque(double quantia)

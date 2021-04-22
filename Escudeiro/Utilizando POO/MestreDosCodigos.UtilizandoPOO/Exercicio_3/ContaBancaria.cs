@@ -17,7 +17,11 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
         public virtual void Sacar(double quantia)
         {
-            Console.WriteLine(this.GetType().Name + ":SAQUE | " + quantia);
+            if (quantia <= 0d)
+            {
+                Console.WriteLine("!! Não é possível sacar valores menores que 0,00 R$ !!");
+                return;
+            }
 
             var haSaldoSuficiente = HaSaldoSuficienteParaSaque(quantia);
             if (!haSaldoSuficiente)
@@ -27,12 +31,11 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
             }
 
             Saldo -= quantia;
+            Console.WriteLine(this.GetType().Name + ":SAQUE | " + quantia);
         }
 
         public virtual void Depositar(double quantia)
         {
-            Console.WriteLine(this.GetType().Name + ":DEPÓSITO | " + quantia);
-
             if (quantia <= 0d)
             {
                 Console.WriteLine("!! Não é possível depositar valores menores que 0,00 R$ !!");
@@ -40,6 +43,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
             }
 
             Saldo += quantia;
+            Console.WriteLine(this.GetType().Name + ":DEPÓSITO | " + quantia);
         }
 
         public virtual void MostrarDados()

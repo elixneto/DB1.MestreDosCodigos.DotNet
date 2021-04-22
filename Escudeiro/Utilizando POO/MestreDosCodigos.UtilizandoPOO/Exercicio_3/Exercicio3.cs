@@ -15,6 +15,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
                 contaCorrente.MostrarDados();
 
+                ConsoleHelper.PressioneEnter();
                 Console.WriteLine("******** Operações *****");
 
                 contaCorrente.Depositar(500);
@@ -24,10 +25,13 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
                 Console.WriteLine("************************");
                 Console.WriteLine();
 
+                ConsoleHelper.PressioneEnter();
                 contaCorrente.MostrarDados();
 
+                ConsoleHelper.PressioneEnter();
                 contaEspecial.MostrarDados();
 
+                ConsoleHelper.PressioneEnter();
                 Console.WriteLine("******** Operações *****");
 
                 contaEspecial.Sacar(320);
@@ -38,6 +42,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
                 Console.WriteLine("************************");
                 Console.WriteLine();
 
+                ConsoleHelper.PressioneEnter();
                 contaEspecial.MostrarDados();
             }
 
