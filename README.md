@@ -19,6 +19,7 @@ dotnet --list-sdks
 
 Acesse o link [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.202-windows-x64-installer) pra baixar o SDK x64 Windows ou https://dotnet.microsoft.com/download/dotnet/5.0 para escolher seu sistema operacional.
 
+Agora é só instalar.
 
 ## Passo 2 - Baixar o projeto
 Faça o download desse projeto e descompacte em uma pasta de sua preferência
