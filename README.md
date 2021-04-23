@@ -2,7 +2,7 @@
 https://db1group.github.io/mestre-dos-codigos/#/dotnet
 
 ## Passo 1 - Instalando .NET 5
-Para a execução das aplicações é necessário instalar o .NET Desktop Runtime 5.
+Para a execução das aplicações é necessário instalar o .NET 5 SDK.
 
 ### Execute o comando no console:
 ```
