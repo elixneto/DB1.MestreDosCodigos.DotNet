@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trabalhando no Console", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MestreDosCodigos.TrabalhandoComTestes.XUNIT", "Trabalhando com Testes\MestreDosCodigos.TrabalhandoComTestes.XUNIT\MestreDosCodigos.TrabalhandoComTestes.XUNIT.csproj", "{376FA095-FFE4-413C-9EA4-79C24991B32D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MestreDosCodigos.TrabalhandoCom.NUNIT", "Trabalhando com Testes\MestreDosCodigos.TrabalhandoCom.NUNIT\MestreDosCodigos.TrabalhandoCom.NUNIT.csproj", "{82F17AFE-E86E-4A00-B718-32A54CBFA137}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MestreDosCodigos.TrabalhandoCom.NUNIT", "Trabalhando com Testes\MestreDosCodigos.TrabalhandoComTestes.NUNIT\MestreDosCodigos.TrabalhandoComTestes.NUNIT.csproj", "{82F17AFE-E86E-4A00-B718-32A54CBFA137}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
