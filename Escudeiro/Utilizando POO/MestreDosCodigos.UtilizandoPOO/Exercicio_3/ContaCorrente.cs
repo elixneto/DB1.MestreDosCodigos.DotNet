@@ -14,16 +14,30 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
 
         public override void Sacar(double quantia)
         {
-            base.Sacar(quantia);
+            try
+            {
+                base.Sacar(quantia);
 
-            DescontarTaxaDeOperacao();
+                DescontarTaxaDeOperacao();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public override void Depositar(double quantia)
         {
-            base.Depositar(quantia);
+            try
+            {
+                base.Depositar(quantia);
 
-            DescontarTaxaDeOperacao();
+                DescontarTaxaDeOperacao();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public override void MostrarDados()
@@ -35,9 +49,9 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
             Console.WriteLine();
         }
 
+        public void DescontarTaxaDeOperacao() => Saldo -= TaxaDeOperacao;
+
         protected override bool HaSaldoSuficienteParaSaque(double quantia)
             => (Saldo - quantia) >= 0;
-
-        private void DescontarTaxaDeOperacao() => Saldo -= TaxaDeOperacao;
     }
 }

@@ -19,15 +19,13 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
         {
             if (quantia <= 0d)
             {
-                Console.WriteLine("!! Não é possível sacar valores menores que 0,00 R$ !!");
-                return;
+                throw new Exception("!! Não é possível sacar valores menores que 0,00 R$ !!");
             }
 
             var haSaldoSuficiente = HaSaldoSuficienteParaSaque(quantia);
             if (!haSaldoSuficiente)
             {
-                Console.WriteLine("!! Não há saldo suficiente para saque !!");
-                return;
+                throw new Exception("!! Não há saldo suficiente para saque !!");
             }
 
             Saldo -= quantia;
@@ -38,8 +36,7 @@ namespace MestreDosCodigos.UtilizandoPOO.Exercicio_3
         {
             if (quantia <= 0d)
             {
-                Console.WriteLine("!! Não é possível depositar valores menores que 0,00 R$ !!");
-                return;
+                throw new Exception("!! Não é possível depositar valores menores que 0,00 R$ !!");
             }
 
             Saldo += quantia;
